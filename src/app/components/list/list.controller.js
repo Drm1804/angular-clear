@@ -9,6 +9,17 @@
   function ListController(){
     var vm = this;
 
+    vm.run = run;
+
+
+    function getDatlist(){
+
+    }
+
+    function run (){
+
+    }
+
   }
 
 })();

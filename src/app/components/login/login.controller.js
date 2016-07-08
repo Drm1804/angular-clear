@@ -2,15 +2,25 @@
     'use strict';
 
   angular.module('ktest')
-  .controller('Login', Login);
+  .controller('LoginController', LoginController);
 
 
-  Login.$inject = [];
-  function Login(){
+  LoginController.$inject = ['$auth', '$state', '$contsApp'];
+  function LoginController($auth, $state, $contsApp){
     var vm = this;
+    vm.login = login;
+    vm.run = run;
 
 
+    function login(){
+      $auth.logIn();
+      $state.go($contsApp.defaultState);
+    }
 
-  };
+    function run(){
+
+    }
+
+  }
 
 })();

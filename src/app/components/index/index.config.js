@@ -15,7 +15,6 @@
         template: '<ui-view></ui-view>',
         resolve: {
           auth: function ($q, $auth, $state) {
-            console.log('988798797978')
             var dfd = $q.defer();
 
             $auth.isAuthorize()

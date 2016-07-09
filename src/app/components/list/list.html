@@ -6,7 +6,7 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li ng-repeat="item in ctrl.listsData" ui-sref-active="active"><a ui-sref="{{item.state}}">{{item.title}}</a></li>
+          <li ng-repeat="item in ctrl.listsData | orderBy: 'order'" ui-sref-active="active"><a ui-sref="{{item.state}}">{{item.title}}</a></li>
 
         </ul>
 

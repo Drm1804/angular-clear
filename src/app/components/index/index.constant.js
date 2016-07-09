@@ -3,6 +3,7 @@
 
   angular.module('ktest')
     .constant('$contsApp', {
-      defaultState: 'auth.list'
+      defaultState: 'auth.list',
+      serverUrl: './'
     })
 })();

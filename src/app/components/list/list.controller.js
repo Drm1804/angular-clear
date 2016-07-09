@@ -9,6 +9,7 @@
   function ListController($list, $state){
     var vm = this;
     vm.listsData = [];
+    vm.searchFilter = '';
     vm.getDataList = getDataList;
     vm.run = run;
     vm.goTo = goTo;
@@ -20,7 +21,9 @@
     }
 
     function goToFirstListState (){
-      $state.go(vm.listsData[1].state);
+      if($state.current.name === 'auth.list' || $state.current.name === 'auth.list.default'){
+        $state.go(vm.listsData[1].state);
+      }
     }
 
 

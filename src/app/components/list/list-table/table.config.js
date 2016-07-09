@@ -9,7 +9,7 @@
     $stateProvider
       .state('auth.list.table', {
         url: '/table',
-        templateUrl: 'app/components/list/list-table/list-table.html'
+        templateUrl: 'app/components/list/list-table/table.html'
       });
 
     $listProvider

@@ -1,0 +1,54 @@
+<h1>Table</h1>
+<div ng-controller="ListTableController as ctrl">
+  <md-input-container md-no-float class="md-block">
+    <input ng-model="ctrl.searchFilter" placeholder="Поиск">
+  </md-input-container>
+  <table class="table" >
+    <thead>
+    <tr>
+      <th ng-click="ctrl.balanceSortFunc('name')" style="cursor: pointer;">
+        Full name
+            <span ng-class="{'glyphicon glyphicon-triangle-bottom' : ctrl.sortDesc,
+            'glyphicon glyphicon-triangle-top': !ctrl.sortDesc}" ng-show="ctrl.sort == 'name'"></span>
+      </th>
+      <th ng-click="ctrl.balanceSortFunc('age')" style="cursor: pointer;">
+        Age
+            <span ng-class="{'glyphicon glyphicon-triangle-bottom' : ctrl.sortDesc,
+            'glyphicon glyphicon-triangle-top': !ctrl.sortDesc}" ng-show="ctrl.sort == 'age'"></span>
+      </th>
+      <th ng-click="ctrl.balanceSortFunc('eyeColor')" style="cursor: pointer;">
+        Group
+            <span ng-class="{'glyphicon glyphicon-triangle-bottom' : ctrl.sortDesc,
+            'glyphicon glyphicon-triangle-top': !ctrl.sortDesc}" ng-show="ctrl.sort == 'group'"></span>
+      </th>
+      <th ng-click="ctrl.balanceSortFunc('gender')" style="cursor: pointer;">
+        Gender
+            <span ng-class="{'glyphicon glyphicon-triangle-bottom' : ctrl.sortDesc,
+            'glyphicon glyphicon-triangle-top': !ctrl.sortDesc}" ng-show="ctrl.sort == 'gender'"></span>
+      </th>
+      <th ng-click="ctrl.balanceSortFunc('balance')" style="cursor: pointer;">
+        Phone
+            <span ng-class="{'glyphicon glyphicon-triangle-bottom' : ctrl.sortDesc,
+            'glyphicon glyphicon-triangle-top': !ctrl.sortDesc}" ng-show="ctrl.sort == 'phone'"></span>
+      </th>
+      <th ng-click="ctrl.balanceSortFunc('email')" style="cursor: pointer;">
+        Email
+            <span ng-class="{'glyphicon glyphicon-triangle-bottom' : ctrl.sortDesc,
+            'glyphicon glyphicon-triangle-top': !ctrl.sortDesc}" ng-show="ctrl.sort == 'email'"></span>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in ctrl.usersList | orderBy: ctrl.sort : ctrl.sortDesc | filter: ctrl.searchFilter">
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.group }}</td>
+      <td>{{ user.gender }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+

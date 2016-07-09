@@ -1,9 +1,6 @@
-<h1>Table</h1>
 <div ng-controller="ListTableController as ctrl">
-  <md-input-container md-no-float class="md-block">
-    <input ng-model="ctrl.searchFilter" placeholder="Поиск">
-  </md-input-container>
-  <table class="table" >
+  <input ng-model="ctrl.searchFilter" class="form-control" placeholder="Поиск">
+  <table class="table">
     <thead>
     <tr>
       <th ng-click="ctrl.balanceSortFunc('name')" style="cursor: pointer;">

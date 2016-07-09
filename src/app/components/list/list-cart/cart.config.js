@@ -8,7 +8,7 @@
   function config($stateProvider, $listProvider) {
     $stateProvider
       .state('auth.list.cart', {
-        utl: '/cart',
+        url: '/cart',
         templateUrl: 'app/components/list/list-cart/list-cart.html'
       });
 

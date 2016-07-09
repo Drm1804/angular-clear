@@ -8,7 +8,7 @@
   function config($stateProvider, $listProvider) {
     $stateProvider
       .state('auth.list.group', {
-        utl: '/group',
+        url: '/group',
         templateUrl: 'app/components/list/list-group/list-group.html'
       });
 

@@ -26,11 +26,8 @@
       },
       $get: function(){
         return{
-          getTypeView:function(){
-
-          },
-          setTypeView: function(){
-
+          getListsData: function(){
+            return listTypes;
           }
         }
       }

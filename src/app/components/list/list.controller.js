@@ -4,20 +4,34 @@
   angular.module('ktest')
   .controller('ListController', ListController);
 
-  ListController.$inject = [];
+  ListController.$inject = ['$list', '$state'];
 
-  function ListController(){
+  function ListController($list, $state){
     var vm = this;
-
+    vm.listsData = [];
+    vm.getDataList = getDataList;
     vm.run = run;
+    vm.goTo = goTo;
+    vm.goToFirstListState = goToFirstListState;
+    vm.run();
+
+    function goTo(state){
+      $state.go(state)
+    }
+
+    function goToFirstListState (){
+      $state.go(vm.listsData[1].state);
+    }
 
 
-    function getDatlist(){
 
+    function getDataList(){
+      vm.listsData = $list.getListsData();
     }
 
     function run (){
-
+      vm.getDataList();
+      vm.goToFirstListState();
     }
 
   }

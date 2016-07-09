@@ -9,7 +9,7 @@
     $stateProvider
       .state('auth.list.cart', {
         url: '/cart',
-        templateUrl: 'app/components/list/list-cart/list-cart.html'
+        templateUrl: 'app/components/list/list-cart/cart.html'
       });
 
     $listProvider

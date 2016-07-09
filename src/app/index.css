@@ -4,3 +4,6 @@
   min-width: 320px;
   margin: 0 auto;
 }
+.caption--min-height{
+  min-height: 240px;
+}

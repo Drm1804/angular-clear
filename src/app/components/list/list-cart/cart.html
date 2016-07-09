@@ -1,0 +1,27 @@
+<div ng-controller="ListCardsController as ctrl">
+  <input ng-model="ctrl.searchFilter" class="form-control" placeholder="Поиск">
+
+  <div class="row">
+    <div class="col-md-2" ng-repeat="user in ctrl.usersList | filter: ctrl.searchFilter">
+      <div class="thumbnail">
+        <img src="http://placehold.it/320x125/EEE" class="">
+
+        <div class="caption caption--min-height">
+          <h4 class="">{{user.name}}</h4>
+
+          <p class="">Gender: {{user.gender}}</p>
+          <p class="">Group: {{user.group}}</p>
+          <p class="">Phone: {{user.phone}}</p>
+          <a href="#" class="btn btn-default btn-xs pull-right" role="button">
+            <i class="glyphicon glyphicon-edit"></i></a>
+          <a href="#" class="btn btn-default btn-xs" role="button">More Info</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+

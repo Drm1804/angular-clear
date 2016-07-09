@@ -4,15 +4,16 @@
   angular.module('ktest')
     .controller('ListController', ListController);
 
-  ListController.$inject = ['$list', '$state','$contsApp'];
+  ListController.$inject = ['$list', '$state','$contsApp', '$auth'];
 
-  function ListController($list, $state, $contsApp) {
+  function ListController($list, $state, $contsApp, $auth) {
     var vm = this;
     vm.listsData = [];
     vm.searchFilter = '';
     vm.getDataList = getDataList;
     vm.run = run;
     vm.goTo = goTo;
+    vm.logOut = logOut;
     vm.goToFirstListState = goToFirstListState;
     vm.run();
 
@@ -39,6 +40,11 @@
 
     }
 
+    function logOut(){
+      $auth.logOut();
+      $state.go($contsApp.defaultState);
+      return false;
+    }
 
     function getDataList() {
       vm.listsData = $list.getListsData();

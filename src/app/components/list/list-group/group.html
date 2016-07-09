@@ -1,0 +1,19 @@
+<div ng-controller="GroupCardsController as ctrl">
+  <input ng-model="ctrl.searchFilter" class="form-control" placeholder="Поиск">
+
+  <div class="row">
+
+    <div class="col-md-3" ng-repeat="(key, value) in ctrl.usersList | filter: ctrl.searchFilter | groupBy: 'group' ">
+      <div class="thumbnail">
+        <h2>{{key}}</h2>
+
+        <div class="thumbnail"  ng-repeat="user in value">
+          <p>{{user.name}}</p>
+          <p>{{user.phone}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

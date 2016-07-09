@@ -9,7 +9,7 @@
     $stateProvider
       .state('auth.list.group', {
         url: '/group',
-        templateUrl: 'app/components/list/list-group/list-group.html'
+        templateUrl: 'app/components/list/list-group/group.html'
       });
 
     $listProvider

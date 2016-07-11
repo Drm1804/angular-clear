@@ -1,4 +1,4 @@
-describe('Тестируем ListCardsController', function () {
+describe('Тестируем GroupCardsController', function () {
 
 
   var dfd
@@ -12,7 +12,7 @@ describe('Тестируем ListCardsController', function () {
     var dfd = $q.defer();
     $list = _$list_;
     $scope = $rootScope.$new();
-    ctrl = $controller('ListCardsController', {
+    ctrl = $controller('GroupCardsController', {
       $scope: $scope
     });
 

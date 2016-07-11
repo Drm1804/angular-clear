@@ -1,12 +1,12 @@
 (function () {
-    'use strict';
+  'use strict';
 
   angular.module('ktest')
-  .controller('ListCardsController', ListCardsController);
+    .controller('ListCardsController', ListCardsController);
 
   ListCardsController.$ingect = ['$list'];
 
-  function ListCardsController($list){
+  function ListCardsController($list) {
     var vm = this;
     vm.usersList = [];
     vm.searchFilter = '';
@@ -22,7 +22,7 @@
         })
     }
 
-    function run(){
+    function run() {
       vm.getUsersList()
     }
   }

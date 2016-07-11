@@ -42,6 +42,11 @@
           logOut: function(){
             auth = false;
             localStorage.auth = false;
+          },
+
+          // Служебный метод для тестов
+          returnAuth: function(){
+            return auth;
           }
 
 
